@@ -1,0 +1,54 @@
+body, html {
+    margin: 0; padding: 0; height: 100%;
+    background-color: black; color: #c9d1d9;
+    font-family: sans-serif;
+}
+
+.container-principal { display: flex; flex-direction: column; height: 100vh; }
+
+#info {
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: 1px solid #30363d;
+}
+
+h3 { display: none; } 
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    gap: 5px;
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3px;
+    align-items: center;
+}
+
+input {
+    background-color: #0d1117;
+    color: #ffffff; 
+    border: 1px solid #30363d;
+    padding: 3px 5px;
+    width: 50px; 
+    border-radius: 3px;
+}
+
+button {
+    margin-top: 5px;
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#simulation-mount {
+    flex-grow: 1;
+    position: relative;
+    background-color: #0d1117;
+    min-height: 300px;
+}

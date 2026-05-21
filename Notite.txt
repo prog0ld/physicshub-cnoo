@@ -1,0 +1,7 @@
+
+
+! parabola la aruncarea pe oblica stricata (merge acasa)
+
+!compunerea fortelor paralele: de reprezentat R, dinamometru
+
+!reprezentare mij la echilbiru de rotatie

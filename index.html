@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulari fizica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/theme.css" />
+  </head>
+  <body class="tema-lab-nocturn">
+    <main class="shell">
+      <nav class="top-nav">
+        <span class="mono-heading text-[0.65rem] uppercase tracking-widest text-[var(--text-sobit)]">Fizica · simulari</span>
+        <span class="mono-heading text-[0.65rem] text-[var(--text-sobit)]">Alege una</span>
+      </nav>
+
+      <header class="hero-index">
+        <p class="mono-heading text-[0.65rem] uppercase tracking-[0.2em] text-[var(--accent)]">Portofoliu</p>
+        <h1>Simulari de fizica</h1>
+        <p class="lead">
+          Alege o simulare. Ruleaza proiectul printr-un server local din folderul care contine toate simulările (ProiectFizica + celelalte),
+          ca iframe-urile sa se incarce corect.
+        </p>
+        <div class="stat-uri">
+          <div class="stat-box">
+            <div class="k">Dosare</div>
+            <div class="v">06</div>
+          </div>
+          <div class="stat-box">
+            <div class="k">Simulari</div>
+            <div class="v">05</div>
+          </div>
+          <div class="stat-box">
+            <div class="k">Slot gol</div>
+            <div class="v">01</div>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+          <h2 class="sectiune-titlu m-0">Dosare proiect</h2>
+        </div>
+        <div id="project-grid" class="grid-carduri"></div>
+      </section>
+    </main>
+
+    <script src="./js/projects.js?v=1"></script>
+    <script src="./js/home.js?v=1"></script>
+  </body>
+</html>

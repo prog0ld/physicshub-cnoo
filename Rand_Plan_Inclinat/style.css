@@ -1,0 +1,74 @@
+body, html {
+    margin: 0; padding: 0; height: 100%;
+    background-color: black; color: #c9d1d9;
+    font-family: sans-serif;
+}
+
+.container-principal { 
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; }
+
+#info {
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: 1px solid #30363d;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 8px;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+input {
+    background-color: #0d1117;
+    color: #ffffff; 
+    border: 1px solid #30363d;
+    padding: 3px 5px;
+    width: 60px; 
+    border-radius: 3px;
+}
+
+button {
+    margin-top: 5px;
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#simulation-mount {
+    flex-grow: 1;
+    position: relative;
+    background-color: black;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+#results-container {
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.results-line {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+
+#state {
+    margin: 5px 0;
+    font-weight: bold;
+}

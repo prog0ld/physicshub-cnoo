@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proiect simulare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/theme.css" />
+    <script>
+      window.MathJax = {
+        tex: { inlineMath: [["\\(", "\\)"]] },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  </head>
+  <body class="tema-lab-nocturn">
+    <main class="shell">
+      <nav class="top-nav">
+        <span class="badge-live">Rulare simulare</span>
+        <a href="./index.html" class="btn-inapoi">← Inapoi la dosare</a>
+      </nav>
+
+      <header class="panou">
+        <h1 id="project-title" class="titlu-proiect mono-heading">Titlu</h1>
+        <p id="project-subtitle" class="subtitlu-proiect">Subtitlu</p>
+        <p class="mono-heading mt-3 text-[0.7rem] text-[var(--text-sobit)]">
+          Ultima actualizare: <span id="last-updated">—</span>
+        </p>
+        <div class="meta-proiect" id="project-tags"></div>
+      </header>
+
+      <section class="etapa-sim" aria-label="Zona simulare">
+        <div class="etapa-sim__antet">
+          <h2>Vizualizare integrata</h2>
+          <span class="tag-tehnic" id="sim-tech-label">iframe · acelasi server</span>
+        </div>
+        <div id="simulation-mount" class="sim-mount"></div>
+      </section>
+
+      <section class="panou">
+        <h2 class="sectiune-titlu">Descrierea proiectului</h2>
+        <div id="project-description" class="proza-proiect"></div>
+      </section>
+
+      <div class="grila-info">
+        <section class="panou m-0">
+          <h2 class="sectiune-titlu">Ipoteze de model</h2>
+          <ul id="project-ipoteze" class="lista-lab"></ul>
+        </section>
+        <section class="panou m-0">
+          <h2 class="sectiune-titlu">Obiective masurabile</h2>
+          <ul id="project-obiective" class="lista-lab"></ul>
+        </section>
+      </div>
+
+      <section class="panou zona-teorie">
+        <h2 class="sectiune-titlu">Formule si teorie (LaTeX)</h2>
+        <div id="equation-list" class="grid-ecuatii"></div>
+      </section>
+
+      <section class="panou note-lab-zona">
+        <h2 class="sectiune-titlu">Note de laborator</h2>
+        <div class="grila-info">
+          <div>
+            <p class="mono-heading text-[0.65rem] uppercase tracking-widest text-[var(--text-sobit)] mb-2">Resurse Utile</p>
+            <div id="lab-media" class="grid gap-3"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/projects.js?v=2"></script>
+    <script src="./js/project-page.js?v=2"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Randamentul planului înclinat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-principal">
+        <div id="info">
+            <div class="controls">
+                <label>Unghi (°): <input type="number" id="angle" value="25"></label>
+                <label>m1 (kg): <input type="number" id="m1" value="2"></label>
+                <label>m2 (kg): <input type="number" id="m2" value="1.5"></label>
+                <label>μ (frec): <input type="number" id="friction" value="0.15" step="0.01"></label>
+                <button id="simulate">Simulează</button>
+            </div>
+        </div>
+        <div id="simulation-mount">
+            <div id="results-container">
+                    <p id="state" style="font-weight: bold; margin: 5px 0;"></p>
+                    <div class="results-line">
+                        <span id="lu"></span>
+                        <span id="lc"></span>
+                        <span id="eta"></span>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
