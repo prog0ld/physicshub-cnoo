@@ -81,13 +81,11 @@ if (nodNotite) {
 if (nodMedia) {
   const mediaContent = [];
 
-  // Helper function to detect media type
   function isVideoFile(src) {
     const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv'];
     return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
   }
 
-  // Adaugă imagini si video-uri din media array
   if (proiect.media && proiect.media.length) {
     mediaContent.push(
       proiect.media

@@ -3,26 +3,29 @@
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
+    <title>Determinarea distanței focale</title>
   </head>
-  <div id="info">
-    <font color="white">
-      <div style="display: flex; align-items: center; gap: 0px;">
-        <p style="margin: 0;">Tip lentila:</p>
-        <select id="tip">
-          <option value="convergenta">Convergenta</option>
-          <option value="divergenta">Divergenta</option>
-        </select>
-      </div>
-      <div style="display: flex; align-items: center; gap: 0px;">
-        <p style="margin: 0;">f (cm):</p>
-        <input type="number" id="focal" value="150"/>
-      </div>
-      <div style="display: flex; align-items: center; gap: 0px;">
-        <p style="margin: 0;">d (cm):</p>
-        <input type="number" id="dist" value="300"/>
-      </div>
-      <p id="output" style="margin: 0;"></p>
-    </font>
-  </div>
-  <script src="sketch.js"></script>
+  <body>
+    <div id="info">
+      <font color="white">
+        <div style="display: flex; align-items: center; gap: 0px;">
+          <p style="margin: 0;">Tip lentila:</p>
+          <select id="tip">
+            <option value="convergenta">Convergenta</option>
+            <option value="divergenta">Divergenta</option>
+          </select>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0px;">
+          <p style="margin: 0;">f (cm):</p>
+          <input type="number" id="focal" value="150"/>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0px;">
+          <p style="margin: 0;">d (cm):</p>
+          <input type="number" id="dist" value="300"/>
+        </div>
+        <p id="output" style="margin: 0;"></p>
+      </font>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
 </html>

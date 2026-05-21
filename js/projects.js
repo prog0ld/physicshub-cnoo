@@ -1,15 +1,15 @@
 const caleRelativaSimulare = {
-  arc: "../Arc/index.html",
-  ulei: "../Simulare_Ulei/index.html",
-  oblica: "../Simulare_Aruncare_Pe_Oblica/index.html",
-  plan_inclinat: "../Ff_Plan_Inclinat/index.html",
-  plan_orizontal: "../Ff_Plan_Orizontal/index.html",
-  comp_f_paralele: "../Comp_F_Paralele/index.html",
-  reflexie_refractie: "../Reflexie_Refractie/index.html",
-  det_d_f: "../Det_d_focale/index.html",
-  echi_rotatie: "../Echilibru_Rotatie/index.html",
-  comp_f_paralelogram: "../Comp_F_Paralelogram/index.html",
-  rand_plan_inclinat: "../Rand_Plan_Inclinat/index.html",
+  arc: "Arc/index.html",
+  ulei: "Simulare_Ulei/index.html",
+  oblica: "Simulare_Aruncare_Pe_Oblica/index.html",
+  plan_inclinat: "Ff_Plan_Inclinat/index.html",
+  plan_orizontal: "Ff_Plan_Orizontal/index.html",
+  comp_f_paralele: "Comp_F_Paralele/index.html",
+  reflexie_refractie: "Reflexie_Refractie/index.html",
+  det_d_f: "Det_d_focale/index.html",
+  echi_rotatie: "Echilibru_Rotatie/index.html",
+  comp_f_paralelogram: "Comp_F_Paralelogram/index.html",
+  rand_plan_inclinat: "Rand_Plan_Inclinat/index.html",
 };
 
 const projects = [
