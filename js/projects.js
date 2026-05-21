@@ -47,7 +47,7 @@ const projects = [
     ],
     materialStudiu: {
       label: "Fișă de laborator",
-      docxFile: "../assets/lucrari-lab/Deteminare constanta elastica.doc",
+      docxFile: "../assets/lucrari-lab/Determinare constanta elastica resort.doc",
     },
   },
   {
@@ -71,7 +71,7 @@ const projects = [
     ],
     media: [
       {
-            label: "Exemplu MRU",
+            label: "Exemplu Miscare Rectiline Uniforma in Ulei",
             src: "../assets/inregistrari/Miscarea uniforma.mp4", 
         },
     ],
@@ -202,7 +202,28 @@ const projects = [
       String.raw`\theta_i = \theta_r`,
       String.raw`n_1 \sin\theta_1 = n_2 \sin\theta_2`,
     ],
-    media: [],
+    media: [
+        {
+            label: "Exemplu reflexie",
+            src: "../assets/poze/reflexie1.jpg", 
+        },
+        {
+            label: "Exemplu reflexie",
+            src: "../assets/poze/reflexie2.jpg", 
+        },
+        {
+            label: "Exemplu refractie",
+            src: "../assets/poze/refractia1.jpg", 
+        },
+        {
+            label: "Exemplu reflexie + refractie",
+            src: "../assets/poze/refractie4.jpg", 
+        },
+        {
+            label: "Exemplu reflexie + refractie",
+            src: "../assets/poze/refractie4.jpg", 
+        },
+    ],
     materialStudiu: {
       label: "Fișă de laborator",
       docxFile: "../assets/lucrari-lab/Studiul reflexiei luminii.docx",
@@ -230,20 +251,16 @@ const projects = [
     ],
     media: [
       {
-            label: "Exemplu forta frecare pe plan inclinat",
-            src: "../assets/poze/reflexie1.jpg", 
+            label: "Exemplu compunerea fortelor paralele",
+            src: "../assets/poze/compFortelorParalele1.jpg", 
         },
       {
-            label: "Exemplu forta frecare pe plan inclinat",
-            src: "../assets/poze/reflexie2.jpg", 
+            label: "Exemplu compunerea fortelor paralele",
+            src: "../assets/poze/compFortelorParalele2.jpg", 
         },
       {
-            label: "Exemplu forta frecare pe plan inclinat",
-            src: "../assets/poze/refractie1.jpg", 
-        },
-      {
-            label: "Exemplu forta frecare pe plan inclinat",
-            src: "../assets/poze/refractie2.jpg", 
+            label: "Exemplu compunerea fortelor paralele",
+            src: "../assets/poze/compFortelorParalele3.jpg", 
         },
     ],
     materialStudiu: {
@@ -269,9 +286,13 @@ const projects = [
       String.raw`R^2 = F_1^2 + F_2^2 + 2F_1F_2\cos\theta`,
     ],
     media: [
-      {
+        {
             label: "Exemplu compunerea fortelor cu regula paralelogramului",
             src: "../assets/poze/paralelogram.jpg", 
+        },
+        {
+            label: "Exemplu compunerea fortelor cu regula paralelogramului",
+            src: "../assets/poze/paralelogram (2).jpg", 
         },
     ],
     materialStudiu: {
@@ -304,54 +325,75 @@ const projects = [
   },
   {
     id: "det-dist-focale",
-    title: "Determinarea distanței focale a unui lentilă convergentă",
-    subtitle: "Metoda distanței focale",
-    summary: "Simulare interactivă pentru studiul formării imaginilor de către o lentilă convergentă și determinarea distanței focale.",
-    engine: "matter.js",
+    title: "Determinarea distanței focale a unei lentile",
+    subtitle: "Studiul formării imaginilor și construcția de raze",
+    summary: "Simulare interactivă bazată pe HTML5 Canvas pentru vizualizarea traiectoriei razelor de lumină prin lentile convergente și divergente, permițând verificarea experimentală a formulelor optice.",
+    engine: "canvas2d",
     topic: "Optică (clasa a 9-a)",
     caleSimulare: caleRelativaSimulare.det_d_f,
     descriereProiect: `
-      <p class="mb-3">Această simulare reproduce experimentul de laborator pentru determinarea randamentului mecanic al planului înclinat în cazul ridicării uniforme a unui corp prin intermediul unui scripete.</p>
+      <p class="mb-3">Această simulare interactivă redă grafic parcursul razelor de lumină (trasare de raze) printr-o lentilă subțire, oferind suport vizual atât pentru <strong>Metoda directă</strong> de determinare a distanței focale, cât și pentru înțelegerea proprietăților imaginilor.</p>
 
-      <p class="mb-3">Corpul paralelipipedic m₁ este tras pe planul înclinat de greutatea suspendată m₂ prin intermediul unui fir trecut peste un scripete ideal. Simularea permite modificarea unghiului planului, a maselor și a coeficientului de frecare pentru observarea influenței acestora asupra mișcării și randamentului.</p>
+      <p class="mb-3">Prin modificarea distanței obiectului (d) și a distanței focale (f), aplicația construiește automat cele trei raze fundamentale:</p>
+      <ul class="mb-3">
+        <li><span style="color: orange;"><strong>Raza paralelă:</strong></span> Vine paralel cu axa optică și trece (sau pare că pleacă) prin focarul imagine.</li>
+        <li><span style="color: purple;"><strong>Raza centrală:</strong></span> Trece optic nedeviată prin centrul lentilei (O).</li>
+        <li><span style="color: teal;"><strong>Raza prin focar:</strong></span> Trece prin focarul obiect și părăsește lentila paralel cu axa optică.</li>
+      </ul>
 
-      <p class="mb-0">Sunt calculate automat lucrul mecanic util, lucrul mecanic consumat și randamentul planului înclinat pentru fiecare determinare experimentală.</p>
+      <p class="mb-0">Simularea calculează instantaneu poziția imaginii (d'), mărirea liniară (m) și caracterul imaginii (reală/răsturnată sau virtuală/dreaptă), oferind un mediu ideal pentru completarea fișei de laborator.</p>
     `,
     ipoteze: [
-      "Firul este ideal.",
-      "Scripetele este ideal.",
-      "Forța de frecare la alunecare este constantă.",
-      "Mișcarea are loc pe direcția planului înclinat.",
+      "Lentila este considerată subțire, iar refracția este idealizată în planul central al acesteia.",
+      "Mediul în care se află lentila este omogen și transparent (aer)."
     ],
     obiective: [
-      "Să determin randamentul mecanic al planului înclinat.",
-      "Să observ influența frecării asupra mișcării.",
-      "Să compar lucrul mecanic util cu lucrul mecanic consumat.",
-      "Să analizez dependența randamentului de unghiul planului."
+      "Să înțeleg modul de construcție geometrică a imaginilor folosind razele de lumină fundamentale.",
+      "Să determin distanța focală a lentilei folosind formula punctelor conjugate (formula lentilelor subțiri).",
+      "Să analizez dependența tipului de imagine (reală/virtuală, mărită/micșorată) de poziția obiectului față de focar.",
+      "Să compar rezultatele obținute prin calcule matematice cu cele generate vizual de simulare."
     ],
     equations: [
-      String.raw`L_u = G_1 h`,
-      String.raw`L_c = G_2 l`,
-      String.raw`\eta = \frac{L_u}{L_c} \cdot 100`,
-      String.raw`F_f = \mu N`,
-      String.raw`F_{net} = G_2 - G_1 \sin\alpha - F_f`,
+      String.raw`\frac{1}{x_2} - \frac{1}{x_1} = \frac{1}{f}`,
+      String.raw`d' = \frac{f \cdot d}{d - f})`,
+      String.raw`m = -\frac{d'}{d}`
     ],
     media: [
         {
-            label: "Exemplu de tabel pentru notițe",
-            src: "../assets/IMG-20260515-WA0036.jpg",
+            label: "Exemplu lentile",
+            src: "../assets/poze/lentile2.jpg",
         },
+        {
+            label: "Exemplu lentile",
+            src: "../assets/poze/lentile3.jpg",
+        },
+        {
+            label: "Exemplu lentila convergentă",
+            src: "../assets/poze/lentile5.jpg",
+        },
+        {
+            label: "Exemplu lentilă divergentă",
+            src: "../assets/poze/lentile4.jpg",
+        },
+        {
+            label: "Video lentilă convergentă",
+            src: "../assets/inregistrari/lentile1.mp4",
+        },
+        {
+            label: "Video lentilă divergentă",
+            src: "../assets/inregistrari/lentile2.mp4",
+        }
     ],
     materialStudiu: {
       label: "Fișă de laborator",
-      docxFile: "../assets/lucrari-lab/Randamentul planului inclinat.doc",
+      docxFile: "../assets/lucrari-lab/Determinarea distanței focale a unei lentile.docx",
     },
   },
   {
     id: "randament",
-    title: "Determinarea radnamentului pe plan înclinat",
+    title: "Determinarea randamentului pe plan înclinat",
     subtitle: "Randamentul mecanic al planului înclinat",
-    summary: "-",
+    summary: "Simulare interactivă pentru determinarea randamentului mecanic al unui plan înclinat folosind un sistem cu scripete și greutate suspendată, permițând observarea efectelor frecării și calcularea lucrului mecanic util și consumat.",
     engine: "matter.js",
     topic: "Mecanică",
     caleSimulare: caleRelativaSimulare.rand_plan_inclinat,
@@ -390,31 +432,6 @@ const projects = [
     materialStudiu: {
       label: "Fișă de laborator",
       docxFile: "../assets/lucrari-lab/Randamentul planului inclinat.doc",
-    },
-  },
-  {
-    id: "simulare-ulei",
-    title: "Miscare rectilinie uniformă în ulei",
-    subtitle: "Miscare rectilinie uniformă într-un fluid",
-    summary: "Demonstrație educațională a mișcării rectilinii uniforme pentru un corp supus unei forțe constante și frecării într-un fluid.",
-    engine: "matter.js",
-    topic: "Fluide (simplu)",
-    caleSimulare: caleRelativaSimulare.ulei,
-    descriereProiect: `
-      <p class="mb-3">Această simulare prezintă mișcarea rectilinie uniformă a unui corp într-un mediu cu frecare. Elevii și profesorii pot observa cum corpul atinge o viteză constantă atunci când forța de tracțiune este echilibrată de forța de frecare.</p>
-    
-    `,
-    ipoteze: ["Forța de frecare este proporțională cu viteza.", "Forța aplicată este constantă și orientată în aceeași direcție cu mișcarea."],
-    obiective: ["Să înțeleagă conceptul de mișcare rectilinie uniformă.", "Să observe când și de ce viteza devine constantă într-un fluid."],
-    equations: [
-      String.raw`F_f = -kv`,
-      String.raw`F_{aplicată} + F_f = 0`,
-      String.raw`v = \text{constanta}`,
-    ],
-    media: [],
-    materialStudiu: {
-      label: "Fișă de laborator",
-      docxFile: "../assets/lucrari-lab/Studiu miscarea rectilinie uniforma.docx",
     },
   },
 ];

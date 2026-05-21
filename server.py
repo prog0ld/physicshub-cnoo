@@ -1,7 +1,7 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 
-DIRECTORY = r"D:\PH"
+DIRECTORY = r"C:\Users\progold\Desktop\PH"
 
 Handler = partial(SimpleHTTPRequestHandler, directory=DIRECTORY)
 

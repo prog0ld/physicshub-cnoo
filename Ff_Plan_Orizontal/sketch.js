@@ -34,7 +34,8 @@ Composite.add(engine.world, [ground, support, block, hanging]);
 Render.run(render);
 Runner.run(Runner.create(), engine);
 
-let velocity = 1.2, dist = 0;
+const initialVelocity = 1.2;
+let velocity = initialVelocity, dist = 0;
 
 Events.on(engine, "beforeUpdate", function() {
   dist += velocity;
@@ -42,6 +43,17 @@ Events.on(engine, "beforeUpdate", function() {
   Body.setPosition(hanging, { x: pulleyX, y: groundY + 130 + dist });
   if (block.position.x >= pulleyX - 70) velocity = 0;
 });
+
+// reset button logic
+const resetBtn = document.getElementById("reset");
+if (resetBtn) {
+  resetBtn.onclick = function() {
+    dist = 0;
+    velocity = initialVelocity;
+    Body.setPosition(block, { x: startX, y: groundY });
+    Body.setPosition(hanging, { x: pulleyX, y: groundY + 130 });
+  };
+}
 
 function drawArrow(x1, y1, x2, y2, color) {
   let a = Math.atan2(y2 - y1, x2 - x1);
